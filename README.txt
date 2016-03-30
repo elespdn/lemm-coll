@@ -1,13 +1,14 @@
-﻿SPELLING VARIATION IS A PROBLEM FOR COLLATING MEDIEVAL TEXT.
+﻿SPELLING VARIATION IS AN ISSUE WHEN COLLATING MEDIEVAL TEXT.
 
 Different approaches have been tried:
 - "normalize" changing into a standard form just for the purpose of the collation
 - consider different kind of matches; not only agreement or disagreement, but also what has been called fuzzy match based on the edit distance among the words.
 
-Another approach is lemmatize the text first and then perform the collation. This is made possible only recently by the development of modules for automatic lemmatization of medieval texts.
-Considering Ancient French, 
---> the Stein parameter file is available for TreeTagger
---> there is also the BFM parameter file for POS annotations, but not for lemmatization
+Another approach is made possible only recently by the development of modules for automatic lemmatization of medieval texts.
+It implies lemmatize the text first and then perform the collation.  
+Considering Ancient French, there are two parameter files available
+--> the Stein parameter file
+--> the BFM parameter file (for POS annotations, not for lemmatization)
 
 PROPOSAL:
 1. lemmatize
@@ -18,15 +19,24 @@ PROPOSAL:
 
 PREREQUISITES
 
-1. INSTALL TREETAGGERWRAPPER
-(full doc at http://treetaggerwrapper.readthedocs.org/en/latest/ )
+1. INSTALL TREE TAGGER
+at <http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/>
+
+
+2. INSTALL THE STEIN PARAMETER FILE
+for lemmatization and POS annotation of ancient French
+at <http://www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen> or directly at <http://www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip>
+
+
+3. INSTALL TREETAGGERWRAPPER
+(full doc at <http://treetaggerwrapper.readthedocs.org/en/latest/> )
 pip install treetaggerwrapper
 
 (In order to have treetaggerwrapper working, you may need to install the six module as well)
 pip install six
 
 
-2. ADD SPECIFICATION FOR ANCIENT FRENCH (STEIN MODULE) 
+4. ADD SPECIFICATION FOR ANCIENT FRENCH (STEIN MODULE) 
 in 'treetaggerwrapper.py' (for example Python34\Lib\site-packages\treetaggerwrapper.py)
 after line 594 (or anywhere among the languages in g_langsupport = {}  )
 
