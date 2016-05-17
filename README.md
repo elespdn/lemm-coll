@@ -40,23 +40,38 @@ pip install six
 4. ADD SPECIFICATION FOR ANCIENT FRENCH (STEIN MODULE) 
 in 'treetaggerwrapper.py' (for example Python34\Lib\site-packages\treetaggerwrapper.py)
 after line 594 (or anywhere among the languages in g_langsupport = {}  )
-'
-"stein": {
+
+'"stein": {
+
         "encoding": "utf-8",
+
         "tagparfile": "stein-utf8.par",
+
         "abbrevfile": "french-abbreviations-utf8",
+
         "pchar": ALONEMARKS + "'",
+
         "fchar": ALONEMARKS + "'",
+
         "pclictic": "[dcjlmnstDCJLNMST]'|[Qq]u'|[Jj]usqu'|[Ll]orsqu'",
+
         "fclictic": "'-t-elles|-t-ils|-t-on|-ce|-elles|-ils|-je|-la|"
-                    "-les|-leur|-lui|-mêmes|-memes|-même|-meme|-m'|-moi|-on|-toi|-tu|-t'|"
-                    "-vous|-en|-y|-ci|-là|-la",
-        "number": NUMBER_EXPRESSION,
-        "dummysentence": "Pas d'ancien français. Cela est une phrase inutile pour assurer la "
+
+					"-les|-leur|-lui|-mêmes|-memes|-même|-meme|-m'|-moi|-on|-toi|-tu|-t'|"
+
+					"-vous|-en|-y|-ci|-là|-la",
+
+		"number": NUMBER_EXPRESSION,
+
+		"dummysentence": "Pas d'ancien français. Cela est une phrase inutile pour assurer la "
                          "transmission des données .",
-        "replurlexp": 'url-remplacée',
-        "replemailexp": 'email-remplacé',
-        "replipexp": 'ip-remplacée>',
-        "repldnsexp": 'dns-remplacé'
-    },
-'
+
+		"replurlexp": 'url-remplacée',
+        
+		"replemailexp": 'email-remplacé',
+        
+		"replipexp": 'ip-remplacée>',
+        
+		"repldnsexp": 'dns-remplacé'
+		
+    },'
