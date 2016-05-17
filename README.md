@@ -1,5 +1,5 @@
-Problem: spelling variation is an issue when collating medieval text.
----------------------------------------------------------------------
+Problem: spelling variation when collating medieval text.
+---------------------------------------------------------
 
 **Different approaches have been tried**:
 - "normalize" changing into a standard form just for the purpose of the collation
@@ -22,32 +22,26 @@ NEW PROPOSAL:
 ### PREREQUISITES
 
 1. INSTALL TREE TAGGER
-
-at [www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/] (http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/)
+	at [www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/] (http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/)
 
 
 2. INSTALL THE STEIN PARAMETER FILE
-
-for lemmatization and POS annotation of ancient French
-at [www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen] (http://www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen) 
-
-or directly at [www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip] (http://www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip)
+	for lemmatization and POS annotation of ancient French at [www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen] (http://www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen) 
+	
+	or directly at [www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip] (http://www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip)
 
 
 3. INSTALL TREETAGGERWRAPPER
-
-(full doc at [treetaggerwrapper.readthedocs.org/en/latest/] (http://treetaggerwrapper.readthedocs.org/en/latest/) )
-pip install treetaggerwrapper
-
-(In order to have treetaggerwrapper working, you may need to install the six module as well)
-pip install six
+	(full doc at [treetaggerwrapper.readthedocs.org/en/latest/] (http://treetaggerwrapper.readthedocs.org/en/latest/) )
+	pip install treetaggerwrapper
+	
+	(In order to have treetaggerwrapper working, you may need to install the six module as well)
+	pip install six
 
 
 4. ADD SPECIFICATION FOR ANCIENT FRENCH (STEIN MODULE) 
-
-in 'treetaggerwrapper.py' (for example Python34\Lib\site-packages\treetaggerwrapper.py)
-
-after line 594 (or anywhere among the languages in g_langsupport = {}  )
+	in 'treetaggerwrapper.py' (for example Python34\Lib\site-packages\treetaggerwrapper.py)
+	after line 594 (or anywhere among the languages in g_langsupport = {}  )
 
     "stein": {
         "encoding": "utf-8",
