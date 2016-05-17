@@ -26,23 +26,24 @@ NEW PROPOSAL:
 
 
 2. INSTALL THE STEIN PARAMETER FILE
-	for lemmatization and POS annotation of ancient French at [www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen] (http://www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen) 
+	* for lemmatization and POS annotation of ancient French at [www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen] (http://www.uni-stuttgart.de/lingrom/stein/#sec:ressourcen) 
 	
-	or directly at [www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip] (http://www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip)
+	* or directly at [www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip] (http://www.uni-stuttgart.de/lingrom/stein/downloads/stein-oldfrench.par.zip)
 
 
 3. INSTALL TREETAGGERWRAPPER
-	(full doc at [treetaggerwrapper.readthedocs.org/en/latest/] (http://treetaggerwrapper.readthedocs.org/en/latest/) )
+	* (full doc at [treetaggerwrapper.readthedocs.org/en/latest/] (http://treetaggerwrapper.readthedocs.org/en/latest/) )
 	pip install treetaggerwrapper
 	
-	(In order to have treetaggerwrapper working, you may need to install the six module as well)
+	* (In order to have treetaggerwrapper working, you may need to install the six module as well)
 	pip install six
 
 
 4. ADD SPECIFICATION FOR ANCIENT FRENCH (STEIN MODULE) 
-	in 'treetaggerwrapper.py' (for example Python34\Lib\site-packages\treetaggerwrapper.py)
+	* in 'treetaggerwrapper.py' (for example Python34\Lib\site-packages\treetaggerwrapper.py)
 	after line 594 (or anywhere among the languages in g_langsupport = {}  )
 
+	
     "stein": {
         "encoding": "utf-8",
         "tagparfile": "stein-utf8.par",
